@@ -1,0 +1,18 @@
+<div class="class">
+  <p>Frutas</p>
+  <ul>
+    <li *ngFor="let animal of animals" > 
+      Nome: <a routerLink="/list/{{animal.id}}"> {{animal.name}}  </a>
+      <button (click)="showDetails(animal)" > Details </button> 
+      <button (click)="removeAnimal(animal)"> Excluir</button>
+      <br><br>
+    </li>
+    
+  </ul>
+  <p> {{animalDetails}} </p> <br>
+  <p> {{validar}} </p>
+  <input type="text" placeholder="nome" [(ngModel)]="name" >
+  <input type="text" placeholder="especie" [(ngModel)]="type">
+  <input type="text" placeholder="idade" [(ngModel)]="age">
+  <button (click)="adicionarAnimal(  )" > adicionar </button>
+</div>

@@ -1,0 +1,13 @@
+<div class="class">
+  <h2> two way data binding</h2>
+  <p> {{ validado }} </p>
+  <p *ngIf="name"> o nome é {{ name }} </p> 
+  <form>
+    <input type="text" [(ngModel)]="name" name="name"  placeholder="digite seu nome"> <br>
+    <input type="text" [(ngModel)]="email" name="email"  placeholder="digite seu email"> <br>
+    <input type="submit" value="enviar" (click)="validarForm()" >
+
+  </form>
+
+
+</div>
